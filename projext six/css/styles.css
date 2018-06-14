@@ -1,14 +1,25 @@
 .wrapper {
     display: block;
-    margin: 135px auto;
+    margin: 35px auto;
     width: 480px;
-    height: 2700px;
+    height: 270px;
+}
+
+p {
+    width: 480px;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px) {
     .wrapper {
-        margin: 135px auto;
+        margin: 35px auto;
         width: 768px;
         height: 432px; 
+    }
+
+    p {
+        width: 768px;
     }
 }
