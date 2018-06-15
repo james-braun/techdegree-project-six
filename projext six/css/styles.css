@@ -1,17 +1,19 @@
 .wrapper {
     display: block;
-    margin: 35px auto;
+    margin: 0 auto 35px;
     width: 480px;
     height: 270px;
 }
 
 p {
-    width: 480px;
+    font-family: 'Montserrat', sans-serif;
+    width: 370px;
     font-size: 18px;
     line-height: 1.5;
     margin: 0 auto;
 }
 
+/* change color of media controls */
 .mejs__controls:not([style*='display: none']) {
     background: rgba(0, 255, 0, 0.35);
 }

@@ -3,21 +3,21 @@ $('video').mediaelementplayer({
     stretching: 'responsive'
 });
 
-const vid = document.getElementById('vid');
-const spanelems = document.querySelectorAll(".span-element");
+const myVideo = document.getElementById('vid');
+const spanelement = document.querySelectorAll(".span-element");
 
-vid.addEventListener('timeupdate', () => {    
-    for (let i = 0; i < spanelems.length; i++) {
-        if ((vid.currentTime > parseFloat($(spanelems[i]).attr("datastart"))) && (vid.currentTime < parseFloat($(spanelems[i]).attr("dataend")))) {
-            spanelems[i].style.color = "yellow";
+myVideo.addEventListener('timeupdate', () => {    
+    for (let i = 0; i < spanelement.length; i++) {
+        if ((myVideo.currentTime > parseFloat($(spanelement[i]).attr("data-start"))) && (myVideo.currentTime < parseFloat($(spanelement[i]).attr("data-end")))) {
+            spanelement[i].style.color = "blue";
         } else {
-            spanelems[i].style.color = "black";
+            spanelement[i].style.color = "black";
         }
     }
 });
 
-for (let i = 0; i < spanelems.length; i++) {
-    spanelems[i].addEventListener('click', () => {
-        vid.currentTime = parseFloat($(spanelems[i]).attr("datastart"));
+for (let i = 0; i < spanelement.length; i++) {
+    spanelement[i].addEventListener('click', () => {
+        myVideo.currentTime = parseFloat($(spanelement[i]).attr("data-start"));
     });
 }
