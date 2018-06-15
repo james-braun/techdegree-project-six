@@ -12,6 +12,10 @@ p {
     margin: 0 auto;
 }
 
+.mejs__controls:not([style*='display: none']) {
+    background: rgba(0, 255, 0, 0.35);
+}
+
 
 @media (min-width: 768px) {
     .wrapper {
