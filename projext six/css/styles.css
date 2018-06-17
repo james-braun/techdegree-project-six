@@ -13,12 +13,6 @@ p {
     margin: 0 auto;
 }
 
-h1, h3 {
-    display: block;
-    margin: 30px auto;
-    text-align: center;
-}
-
 /* change color of media controls */
 .mejs__controls:not([style*='display: none']) {
     background: rgba(0, 255, 0, 0.35);
