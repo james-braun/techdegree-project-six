@@ -3,24 +3,25 @@ $('video').mediaelementplayer({
     stretching: 'responsive'
 });
 
-const myVideo = document.getElementById('vid');
-const spanelement = document.querySelectorAll(".span-element");
+const $myVideo = $('#vid');
+const $spanelement = $(".span-element");
+console.log($myVideo);
 
-myVideo.addEventListener('timeupdate', function() {    
-    for (let i = 0; i < spanelement.length; i++) {
-        if ((myVideo.currentTime > parseFloat($(spanelement[i]).attr("data-start"))) && (myVideo.currentTime < parseFloat($(spanelement[i]).attr("data-end")))) {
-            spanelement[i].style.color = "blue";
+$myVideo.on('timeupdate', function () {   
+    for (let i = 0; i < $spanelement.length; ++i) {
+        if ((this.currentTime > parseFloat($spanelement.eq(i).attr("data-start"))) && (this.currentTime < parseFloat($spanelement.eq(i).attr("data-end")))) {
+            $spanelement.eq(i).css("color", "blue");
         } else {
-            spanelement[i].style.color = "black";
+            $spanelement.eq(i).css("color", "black");
         }
     }
 });
 
-for (let j = 0; j < spanelement.length; ++j) {
-    spanelement[j].addEventListener('click', function(e) {
-        for (let i = 0; i < spanelement.length; ++i) {
-            if ($(e.target).is(spanelement[i])) {
-                myVideo.currentTime = parseFloat($(spanelement[i]).attr("data-start"));    
+for (let j = 0; j < $spanelement.length; ++j) {
+    $spanelement.eq(j).click(function(e) {
+        for (let i = 0; i < $spanelement.length; ++i) {
+            if ($(e.target).is($spanelement.eq(i))) {
+                $myVideo[0].currentTime = $spanelement.eq(i).attr("data-start");    
             }
         }
     });
