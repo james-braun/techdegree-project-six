@@ -13,7 +13,7 @@ p {
     margin: 0 auto;
 }
 
-/* change color of media controls */
+/* change color of media controls from black to transparent green on hover and beginning */
 .mejs__controls:not([style*='display: none']) {
     background: rgba(0, 255, 0, 0.35);
 }
