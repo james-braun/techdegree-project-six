@@ -2,11 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\projext six",
+    "\\projext six\\css",
     "\\projext six\\js",
     "\\projext six\\MediaElement",
     "\\projext six\\mockups",
     "\\projext six\\video"
   ],
-  "SelectedNode": "\\projext six\\js\\JavaScript.js",
+  "SelectedNode": "\\projext six\\MediaElement\\mediaelementplayer.min.css",
   "PreviewInSolutionExplorer": false
 }
